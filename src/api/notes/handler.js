@@ -12,6 +12,12 @@ class NotesHandler {
     this.deleteNoteByIdHandler = this.deleteNoteByIdHandler.bind(this);
   }
 
+  /**
+   * add new note post to server
+   * @param {*} request 
+   * @param {*} h 
+   * @returns 
+   */
   postNoteHandler(request, h) {
     try {
       this._validator.validateNotePayload(request.payload);
